@@ -1,0 +1,93 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+   
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Assignment 1</h1>
+        <p class="lead">
+          Student ID: 1001829098 <br />
+          Name: Ajith Sivadas <br>
+        </p>
+      </div>
+
+    </div>
+    {% block head %} 
+<!--Placeholder for body-->
+{% block body %}
+<div class="container">
+  {% if table|length>0 %}
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">time</th>
+          <th scope="col">latitude</th>
+          <th scope="col">longitude</th>
+          <th scope="col">depth</th>
+          <th scope="col">mag</th>
+          <th scope="col">magType</th>
+          <th scope="col">nst</th>
+          <th scope="col">gap</th>
+          <th scope="col">dmin</th>
+          <th scope="col">rms</th>
+          <th scope="col">net</th>
+          <th scope="col">id</th>
+          <th scope="col">updated</th>
+          <th scope="col">place</th>
+          <th scope="col">type</th>
+          <th scope="col">horizontalError</th>
+          <th scope="col">depthError</th>
+          <th scope="col">magError</th>
+          <th scope="col">magNst</th>
+          <th scope="col">status</th>
+          <th scope="col">locationSource</th>
+          <th scope="col">magSource</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for data in table %}
+        <tr>
+          <td>{{ data[0] }}</td>
+          <td>{{ data[1] }}</td>
+          <td>{{ data[2] }}</td>
+          <td>{{ data[3] }}</td>
+          <td>{{ data[4] }}</td>
+          <td>{{ data[5] }}</td>
+          <td>{{ data[6] }}</td>
+          <td>{{ data[7] }}</td>
+          <td>{{ data[8] }}</td>
+          <td>{{ data[9] }}</td>
+          <td>{{ data[10] }}</td>
+          <td>{{ data[11] }}</td>
+          <td>{{ data[12] }}</td>
+          <td>{{ data[13] }}</td>
+          <td>{{ data[14] }}</td>
+          <td>{{ data[15] }}</td>
+          <td>{{ data[16] }}</td>
+          <td>{{ data[17] }}</td>
+          <td>{{ data[18] }}</td>
+          <td>{{ data[19] }}</td>
+          <td>{{ data[20] }}</td>
+          <td>{{ data[21] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <h4>No data available..</h4>
+  {% endif %}
+</div>
+{% endblock %} 
+{% endblock %} 
+  </body>
+
+</html>
+
+
